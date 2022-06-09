@@ -56,7 +56,14 @@ function start(){
 
 // Função de recomeçar:
 function reset() {
-    console.log("O botão de recomeçar foi clicado.");
+    clearInterval(interval);
+    interval = null;
+    timer = [0,0,0,0];
+    timerRunning = false;
+
+    testArea.value = "";
+    theTimer.innerHTML = "00:00:00";
+    testWrapper.style.borderColor = 'grey';
 }
 
 // Listeners de eventos para entrada de teclado e o botão de recomeçar:
