@@ -28,7 +28,17 @@ function runTimer(){
 // Verifica se texto digitado com o fornecido na página:
 function spellCheck() { 
     let textEntered = testArea.value;
-    console.log(textEntered);
+    let originTextMatch = originText.substring(0, textEntered.length);
+        if (textEntered == originText){
+                testWrapper.style.borderColor = '#04ed4c';
+        } else{
+            if (textEntered == originTextMatch){
+                testWrapper.style.borderColor = '#65ccf3';
+        } else{
+            testWrapper.style.borderColor = '#E95D0f'
+        }
+    }
+    
 }
 
 // Inicia o cronômetro:
